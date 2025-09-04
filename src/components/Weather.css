@@ -1,0 +1,144 @@
+.weather {
+  place-self: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px 30px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #2f4680, #500ae4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Search Bar --- */
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.search-bar input {
+  flex: 1;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  padding: 0 20px;
+  font-size: 18px;
+  color: #222;
+  background: #ebfffc;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-bar input:focus {
+  background: #d1f7f7;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+  border: 2px solid #500ae4; /* Added focus border */
+}
+
+.search-bar img {
+  width: 50px;
+  height: 50px;
+  padding: 12px;
+  border-radius: 50%;
+  background: #ebfffc;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.search-bar img:hover {
+  transform: scale(1.1);
+  background: #d1f7f7;
+}
+
+/* --- Weather Info --- */
+.weather-icon {
+  width: 120px;
+  margin: 20px 0;
+}
+
+.temperature {
+  font-size: 72px;
+  font-weight: bold;
+  color: #fff;
+  margin: 8px 0;
+  line-height: 1;
+}
+
+.location {
+  font-size: 32px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+/* --- Weather Data (Humidity / Wind) --- */
+.weather-data {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 15px;
+  gap: 20px;
+}
+
+.weather-data .col {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.weather-data .col img {
+  width: 28px;
+  height: 28px;
+}
+
+.weather-data .col div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.weather-data .col p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.weather-data .col span {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* Loading and Error States */
+.loading {
+  color: #fff;
+  font-size: 18px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 16px;
+  margin: 20px 0;
+  text-align: center;
+  background: rgba(255, 107, 107, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+.description {
+  color: #fff;
+  font-size: 18px;
+  margin-top: 8px;
+  text-transform: capitalize;
+  opacity: 0.9;
+}
